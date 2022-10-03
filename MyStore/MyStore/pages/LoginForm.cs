@@ -19,5 +19,7 @@ namespace MyStore.pages
         [FindsBy(How = How.Id, Using = "SubmitLogin")]
         public IWebElement SignInButton { get; set; }
 
+        [FindsBy(How = How.CssSelector, Using = "#center_column > div.alert.alert-danger > ol > li")]
+        public IWebElement EmailErrorMessage { get; set; }
     }
 }

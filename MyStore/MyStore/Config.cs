@@ -16,7 +16,15 @@
             {
                 public static string Email = "d @gmail.com";
                 public static string Password = "bla";
+                public static string Empty = "";
             }
         }
+
+        public static class ErrorMessages
+        {
+            public static string InvalidEmail = "Invalid email address.";
+            public static string EmptyEmailField = "An email address required.";
+        }
+
     }
 }
