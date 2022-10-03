@@ -18,3 +18,4 @@ C:\Users\mila.bogovac\Desktop\my-store\MyStore\MyStore\obj\Debug\MyStore.csproj.
 C:\Users\mila.bogovac\Desktop\my-store\MyStore\MyStore\obj\Debug\MyStore.csproj.CopyComplete
 C:\Users\mila.bogovac\Desktop\my-store\MyStore\MyStore\obj\Debug\MyStore.exe
 C:\Users\mila.bogovac\Desktop\my-store\MyStore\MyStore\obj\Debug\MyStore.pdb
+C:\Users\mila.bogovac\Desktop\my-store\MyStore\MyStore\bin\Debug\SeleniumExtras.WaitHelpers.dll

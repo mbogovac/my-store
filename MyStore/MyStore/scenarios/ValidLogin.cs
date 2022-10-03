@@ -1,6 +1,7 @@
 ﻿
 using NUnit.Framework;
 using OpenQA.Selenium;
+using System;
 
 namespace MyStore.scenarios
 {
@@ -15,6 +16,9 @@ namespace MyStore.scenarios
         {
             Actions.InitializeDriver();
             NavigateTo.LoginFormThroughHomePage();
+
+            Driver.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+            Driver.driver.Manage().Window.Maximize();
         }
 
         [Test]

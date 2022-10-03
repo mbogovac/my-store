@@ -21,5 +21,13 @@ namespace MyStore
             loginForm.PasswordField.SendKeys(password);
             loginForm.SignInButton.Click();
         }
+
+        public static void EmailForForgottenPass(string email)
+        {
+            ForgotPasswordPage fpPage = new ForgotPasswordPage();
+            fpPage.EmailField.Clear();
+            fpPage.EmailField.SendKeys(email);
+            fpPage.RetrievePassword.Click();
+        }
     }
 }

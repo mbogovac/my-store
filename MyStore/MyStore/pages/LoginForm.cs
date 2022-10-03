@@ -21,5 +21,8 @@ namespace MyStore.pages
 
         [FindsBy(How = How.CssSelector, Using = "#center_column > div.alert.alert-danger > ol > li")]
         public IWebElement EmailErrorMessage { get; set; }
+
+        [FindsBy(How = How.CssSelector, Using = "#login_form > div > p.lost_password.form-group > a")]
+        public IWebElement ForgotPasswordLink { get; set; }
     }
 }
