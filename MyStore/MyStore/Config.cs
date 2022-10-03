@@ -24,6 +24,7 @@
         {
             public static string InvalidEmail = "Invalid email address.";
             public static string EmptyEmailField = "An email address required.";
+            public static string EmptyPasswordField = "Password is required.";
         }
 
     }

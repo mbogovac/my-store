@@ -2,6 +2,7 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using System;
 
 namespace MyStore.scenarios
 {
@@ -16,6 +17,9 @@ namespace MyStore.scenarios
         {
             Actions.InitializeDriver();
             NavigateTo.LoginFormThroughHomePage();
+
+            Driver.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+            Driver.driver.Manage().Window.Maximize();
         }
 
         [Test]
@@ -34,6 +38,13 @@ namespace MyStore.scenarios
             Assert.AreEqual(Config.ErrorMessages.EmptyEmailField, errorMessage.Text);
         }
 
+        [Test]
+        public void EmptyPasswordField()
+        {
+            Actions.FillLoginForm(Config.Credentials.Valid.Email, Config.Credentials.Invalid.Empty);
+            var errorMessage = Driver.driver.FindElement(By.CssSelector("#center_column > div.alert.alert-danger > ol > li"));
+            Assert.AreEqual(Config.ErrorMessages.EmptyPasswordField, errorMessage.Text);
+        }
 
         [OneTimeTearDown]
         public void CleanUp()
