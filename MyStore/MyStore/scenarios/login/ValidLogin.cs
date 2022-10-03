@@ -1,14 +1,13 @@
 ﻿
-using MyStore.pages;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using System;
 
-namespace MyStore.scenarios
+namespace MyStore.scenarios.login
 {
-    public class LoginInvalidEmail
+    public class ValidLogin
     {
-        public LoginInvalidEmail()
+        public ValidLogin()
         {
         }
 
@@ -23,12 +22,11 @@ namespace MyStore.scenarios
         }
 
         [Test]
-        public void InvalidEmail()
+        public void ValidCredetials()
         {
-            Actions.FillLoginForm(Config.Credentials.Invalid.Email, Config.Credentials.Valid.Password);
-
-            var errorMessage = Driver.driver.FindElement(By.CssSelector("#center_column > div.alert.alert-danger > ol > li"));
-            Assert.AreEqual(Config.ErrorMessages.InvalidEmail, errorMessage.Text);
+            Actions.FillLoginForm(Config.Credentials.Valid.Email, Config.Credentials.Valid.Password);
+            var signOut = Driver.driver.FindElement(By.ClassName("logout"));
+            Assert.IsTrue(signOut.Displayed);
         }
 
         [OneTimeTearDown]

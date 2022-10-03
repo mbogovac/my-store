@@ -4,7 +4,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
 
-namespace MyStore.scenarios
+namespace MyStore.scenarios.login
 {
     public class LoginEmptyFields
     {

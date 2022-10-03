@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyStore.scenarios
+namespace MyStore.scenarios.login
 {
     public class RetrievePasswordValidEmail
     {

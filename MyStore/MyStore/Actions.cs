@@ -1,5 +1,6 @@
 ﻿using MyStore.pages;
 using OpenQA.Selenium.Chrome;
+using System.Threading;
 
 namespace MyStore
 {
@@ -28,6 +29,14 @@ namespace MyStore
             fpPage.EmailField.Clear();
             fpPage.EmailField.SendKeys(email);
             fpPage.RetrievePassword.Click();
+        }
+
+        public static void FillAuthenticationForm(string email)
+        {
+            AuthenticationForm authForm = new AuthenticationForm();
+            authForm.EmailAuthentication.Clear();
+            authForm.EmailAuthentication.SendKeys(email);
+            authForm.CreateAccount.Click();
         }
     }
 }
