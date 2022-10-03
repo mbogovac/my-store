@@ -17,8 +17,7 @@ namespace MyStore.pages
         public IWebElement PasswordField { get; set; }
 
         [FindsBy(How = How.Id, Using = "SubmitLogin")]
-        IWebElement SignInButton { get; set; }
-
+        public IWebElement SignInButton { get; set; }
 
     }
 }

@@ -60,13 +60,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actions.cs" />
     <Compile Include="cases\ValidLogin.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="Driver.cs" />
     <Compile Include="EntryPoint.cs" />
+    <Compile Include="NavigateTo.cs" />
     <Compile Include="pages\AuthenticationPage.cs" />
     <Compile Include="pages\HomePage.cs" />
     <Compile Include="pages\LoginForm.cs" />
+    <Compile Include="pages\MyAccountPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
