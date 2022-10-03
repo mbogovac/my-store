@@ -17,7 +17,6 @@
                 public static string Email = "d @gmail.com";
                 public static string Password = "bla";
             }
-
         }
     }
 }
