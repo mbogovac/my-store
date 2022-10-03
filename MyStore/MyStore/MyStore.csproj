@@ -65,16 +65,19 @@
   <ItemGroup>
     <Compile Include="Actions.cs" />
     <Compile Include="pages\ForgotPasswordPage.cs" />
-    <Compile Include="scenarios\LoginEmptyFields.cs" />
-    <Compile Include="scenarios\LoginInvalidEmail.cs" />
-    <Compile Include="scenarios\RetrievePassInvalidEmail.cs" />
-    <Compile Include="scenarios\RetrievePasswordValidEmail.cs" />
-    <Compile Include="scenarios\ValidLogin.cs" />
+    <Compile Include="scenarios\authentication\AuthenticationEmptyEmail.cs" />
+    <Compile Include="scenarios\authentication\AuthenticationInvalidEmail.cs" />
+    <Compile Include="scenarios\authentication\AuthenticationValidEmail.cs" />
+    <Compile Include="scenarios\login\LoginEmptyFields.cs" />
+    <Compile Include="scenarios\login\LoginInvalidEmail.cs" />
+    <Compile Include="scenarios\login\RetrievePassInvalidEmail.cs" />
+    <Compile Include="scenarios\login\RetrievePasswordValidEmail.cs" />
+    <Compile Include="scenarios\login\ValidLogin.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="Driver.cs" />
     <Compile Include="EntryPoint.cs" />
     <Compile Include="NavigateTo.cs" />
-    <Compile Include="pages\AuthenticationPage.cs" />
+    <Compile Include="pages\AuthenticationForm.cs" />
     <Compile Include="pages\HomePage.cs" />
     <Compile Include="pages\LoginForm.cs" />
     <Compile Include="pages\MyAccountPage.cs" />
