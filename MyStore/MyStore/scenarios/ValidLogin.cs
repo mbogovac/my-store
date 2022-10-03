@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
 
-namespace MyStore.cases
+namespace MyStore.scenarios
 {
     public class ValidLogin
     {
