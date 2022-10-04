@@ -10,7 +10,7 @@
             {
                 public static string Email = "delboy@gmail.com";
                 public static string Password = "12345";
-                public static string UnregisteredEmail = "mila16@gmail.com";
+                public static string UnregisteredEmail = "mila17@gmail.com";
             }
 
             public static class Invalid
@@ -38,6 +38,8 @@
             {
                 public static string Empty = "";
                 public static string PassLessThan5 = "123";
+                public static string InvalidPhone = "+381aaaa";
+                public static string InvalidZip = "aaa";
             }
         }
 
@@ -49,6 +51,8 @@
             public static string EmptyPasswordField = "Password is required.";
             public static string ExistingEmail = "An account using this email address has already been registered. Please enter a valid password or request a new one.";
             public static string InvalidPass = "passwd is invalid.";
+            public static string InvalidPhone = "phone_mobile is invalid.";
+            public static string InvalidZipCode = "The Zip/Postal code you've entered is invalid. It must follow this format: 00000";
         }
 
     }
