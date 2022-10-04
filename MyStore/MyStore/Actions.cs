@@ -1,4 +1,5 @@
 ﻿using MyStore.pages;
+using NUnit.Framework;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using System.Threading;
@@ -62,6 +63,18 @@ namespace MyStore
             s.SelectByText("Florida");
 
             createAcc.SubmitAccount.Click();
+        }
+
+        public static void MrRadioBtn()
+        {
+            CreateAccountPage createAcc = new CreateAccountPage();
+            createAcc.MrGender.Click();
+        }
+
+        public static void MrsRadioBtn()
+        {
+            CreateAccountPage createAcc = new CreateAccountPage();
+            createAcc.MrsGender.Click();
         }
     }
 }
