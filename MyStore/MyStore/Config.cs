@@ -10,7 +10,7 @@
             {
                 public static string Email = "delboy@gmail.com";
                 public static string Password = "12345";
-                public static string UnregisteredEmail = "mila12@gmail.com";
+                public static string UnregisteredEmail = "mila13@gmail.com";
             }
 
             public static class Invalid
@@ -20,6 +20,26 @@
                 public static string Empty = "";
             }
         }
+
+        public static class CreateAccountData
+        {
+            public static class Valid
+            {
+                public static string FirstName = "Mila";
+                public static string LastName = "Bogovac";
+                public static string Password = "mila123";
+                public static string Address = "Kraljevica Marka 32";
+                public static string City = "Miami";
+                public static string PostalCode = "11100";
+                public static string MobilePhone = "+3816911111";
+            }
+
+            public static class Invalid
+            {
+
+            }
+        }
+
 
         public static class ErrorMessages
         {

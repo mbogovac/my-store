@@ -1,5 +1,6 @@
 ﻿using MyStore.pages;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
 using System.Threading;
 
 namespace MyStore
@@ -37,6 +38,30 @@ namespace MyStore
             authForm.EmailAuthentication.Clear();
             authForm.EmailAuthentication.SendKeys(email);
             authForm.CreateAccount.Click();
+        }
+
+        public static void FillCreateAccountForm(string firstName, string lastName, string password, string address, string city, string zip, string phone)
+        {
+            CreateAccountPage createAcc = new CreateAccountPage();
+            createAcc.FirstName.Clear();
+            createAcc.FirstName.SendKeys(firstName);
+            createAcc.LastName.Clear();
+            createAcc.LastName.SendKeys(lastName);
+            createAcc.Password.Clear();
+            createAcc.Password.SendKeys(password);
+            createAcc.Address.Clear();
+            createAcc.Address.SendKeys(address);
+            createAcc.City.Clear();
+            createAcc.City.SendKeys(city);
+            createAcc.PostalCode.Clear();
+            createAcc.PostalCode.SendKeys(zip);
+            createAcc.MobilePhone.Clear();
+            createAcc.MobilePhone.SendKeys(phone);
+
+            SelectElement s = new SelectElement(createAcc.StateDropDown);
+            s.SelectByText("Florida");
+
+            createAcc.SubmitAccount.Click();
         }
     }
 }
