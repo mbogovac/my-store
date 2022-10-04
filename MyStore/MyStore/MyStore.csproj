@@ -69,6 +69,8 @@
     <Compile Include="scenarios\authentication\AuthenticationEmptyEmail.cs" />
     <Compile Include="scenarios\authentication\AuthenticationInvalidEmail.cs" />
     <Compile Include="scenarios\authentication\AuthenticationValidEmail.cs" />
+    <Compile Include="scenarios\createAccount\EmptyMandatoryFields.cs" />
+    <Compile Include="scenarios\createAccount\InvalidData.cs" />
     <Compile Include="scenarios\createAccount\MandatoryValidData.cs" />
     <Compile Include="scenarios\login\LoginEmptyFields.cs" />
     <Compile Include="scenarios\login\LoginInvalidEmail.cs" />

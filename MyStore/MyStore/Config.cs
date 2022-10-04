@@ -10,7 +10,7 @@
             {
                 public static string Email = "delboy@gmail.com";
                 public static string Password = "12345";
-                public static string UnregisteredEmail = "mila13@gmail.com";
+                public static string UnregisteredEmail = "mila16@gmail.com";
             }
 
             public static class Invalid
@@ -36,7 +36,8 @@
 
             public static class Invalid
             {
-
+                public static string Empty = "";
+                public static string PassLessThan5 = "123";
             }
         }
 
@@ -47,6 +48,7 @@
             public static string EmptyEmailField = "An email address required.";
             public static string EmptyPasswordField = "Password is required.";
             public static string ExistingEmail = "An account using this email address has already been registered. Please enter a valid password or request a new one.";
+            public static string InvalidPass = "passwd is invalid.";
         }
 
     }
