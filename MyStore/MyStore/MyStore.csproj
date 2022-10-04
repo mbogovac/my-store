@@ -64,10 +64,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actions.cs" />
+    <Compile Include="pages\CreateAccountPage.cs" />
     <Compile Include="pages\ForgotPasswordPage.cs" />
     <Compile Include="scenarios\authentication\AuthenticationEmptyEmail.cs" />
     <Compile Include="scenarios\authentication\AuthenticationInvalidEmail.cs" />
     <Compile Include="scenarios\authentication\AuthenticationValidEmail.cs" />
+    <Compile Include="scenarios\createAccount\MandatoryValidData.cs" />
     <Compile Include="scenarios\login\LoginEmptyFields.cs" />
     <Compile Include="scenarios\login\LoginInvalidEmail.cs" />
     <Compile Include="scenarios\login\RetrievePassInvalidEmail.cs" />
