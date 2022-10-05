@@ -70,6 +70,7 @@
     <Compile Include="scenarios\authentication\AuthenticationEmptyEmail.cs" />
     <Compile Include="scenarios\authentication\AuthenticationInvalidEmail.cs" />
     <Compile Include="scenarios\authentication\AuthenticationValidEmail.cs" />
+    <Compile Include="scenarios\contactUs\loggedOutUsers\MsgWithoutMandatoryFields.cs" />
     <Compile Include="scenarios\contactUs\loggedOutUsers\SendMessageValidData.cs" />
     <Compile Include="scenarios\createAccount\EmptyMandatoryFields.cs" />
     <Compile Include="scenarios\createAccount\InvalidData.cs" />

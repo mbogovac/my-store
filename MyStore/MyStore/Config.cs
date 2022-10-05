@@ -70,6 +70,8 @@
             public static string InvalidPhone = "phone_mobile is invalid.";
             public static string InvalidZipCode = "The Zip/Postal code you've entered is invalid. It must follow this format: 00000";
             public static string NoStateSelected = "This country requires you to choose a State.";
+            public static string EmptyMessageField = "The message cannot be blank.";
+            public static string NothingInDropDown = "Please select a subject from the list provided.";
         }
 
         public static class SuccessMsg

@@ -104,5 +104,23 @@ namespace MyStore
 
         }
 
+        public static void ContactFormEmptyDropDown(string email, string orderRef, string msg)
+        {
+            ContactUsPage contactUsPage = new ContactUsPage();
+
+            SelectElement s = new SelectElement(contactUsPage.SubjectDropDown);
+            s.SelectByText("-- Choose --");
+
+            contactUsPage.Email.Clear();
+            contactUsPage.Email.SendKeys(email);
+            contactUsPage.OrderReference.Clear();
+            contactUsPage.OrderReference.SendKeys(orderRef);
+            contactUsPage.Message.Clear();
+            contactUsPage.Message.SendKeys(msg);
+
+            contactUsPage.SubmitMessage.Click();
+
+        }
+
     }
 }

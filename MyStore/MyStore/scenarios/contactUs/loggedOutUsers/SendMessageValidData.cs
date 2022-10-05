@@ -1,6 +1,7 @@
 ﻿
 using NUnit.Framework;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using System;
 
 namespace MyStore.scenarios.contactUs.loggedOutUsers
@@ -27,6 +28,10 @@ namespace MyStore.scenarios.contactUs.loggedOutUsers
             Actions.FillContactUsForm(Config.ContactUsData.Valid.Email,
                                       Config.ContactUsData.Valid.OrderRef,
                                       Config.ContactUsData.Valid.Message);
+
+            WebDriverWait wait = new WebDriverWait(Driver.driver, TimeSpan.FromSeconds(8));
+            IWebElement registrationHeading = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.CssSelector("#center_column > p")));
+            Assert.IsTrue(registrationHeading.Displayed);
 
             var successMsg = Driver.driver.FindElement(By.CssSelector("#center_column > p"));
             Assert.AreEqual(Config.SuccessMsg.MessageSent, successMsg.Text);
