@@ -122,5 +122,39 @@ namespace MyStore
 
         }
 
+        public static void FillContactFormLoggedIn(string msg)
+        {
+            ContactUsPage contactUsPage = new ContactUsPage();
+
+            SelectElement s = new SelectElement(contactUsPage.SubjectDropDown);
+            s.SelectByText("Customer service");
+
+            SelectElement sEl = new SelectElement(contactUsPage.OrderRefDropDown);
+            sEl.SelectByIndex(1);
+
+            contactUsPage.Message.Clear();
+            contactUsPage.Message.SendKeys(msg);
+
+            contactUsPage.SubmitMessage.Click();
+        }
+
+        public static void FillContactFormDifferentEmail(string email, string msg)
+        {
+            ContactUsPage contactUsPage = new ContactUsPage();
+
+            SelectElement s = new SelectElement(contactUsPage.SubjectDropDown);
+            s.SelectByText("Customer service");
+
+            SelectElement sEl = new SelectElement(contactUsPage.OrderRefDropDown);
+            sEl.SelectByIndex(1);
+
+            contactUsPage.Email.Clear();
+            contactUsPage.Email.SendKeys(email);
+            contactUsPage.Message.Clear();
+            contactUsPage.Message.SendKeys(msg);
+
+            contactUsPage.SubmitMessage.Click();
+        }
+
     }
 }
