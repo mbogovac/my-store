@@ -19,17 +19,17 @@ namespace MyStore.scenarios.createAccount
             NavigateTo.LoginFormThroughHomePage();
 
             Driver.driver.Manage().Window.Maximize();
-            Driver.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+            Driver.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(7);
+
+            Actions.FillAuthenticationForm(Config.Credentials.Valid.UnregisteredEmail);
+            WebDriverWait wait = new WebDriverWait(Driver.driver, TimeSpan.FromSeconds(8));
+            IWebElement registrationHeading = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.CssSelector("#account-creation_form > div:nth-child(1) > h3")));
+            Assert.IsTrue(registrationHeading.Displayed);
         }
 
         [Test]
         public void PasswordLessThan5()
         {
-            Actions.FillAuthenticationForm(Config.Credentials.Valid.UnregisteredEmail);
-            WebDriverWait wait = new WebDriverWait(Driver.driver, TimeSpan.FromSeconds(6));
-            IWebElement registrationHeading = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.CssSelector("#account-creation_form > div:nth-child(1) > h3")));
-            Assert.IsTrue(registrationHeading.Displayed);
-
             Actions.FillCreateAccountForm(Config.CreateAccountData.Valid.FirstName,
                                           Config.CreateAccountData.Valid.LastName,
                                           Config.CreateAccountData.Invalid.PassLessThan5,
@@ -45,10 +45,6 @@ namespace MyStore.scenarios.createAccount
         [Test]
         public void InvalidMobilePhone()
         {
-            Actions.FillAuthenticationForm(Config.Credentials.Valid.UnregisteredEmail);
-            WebDriverWait wait = new WebDriverWait(Driver.driver, TimeSpan.FromSeconds(6));
-            IWebElement registrationHeading = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.CssSelector("#account-creation_form > div:nth-child(1) > h3")));
-            Assert.IsTrue(registrationHeading.Displayed);
 
             Actions.FillCreateAccountForm(Config.CreateAccountData.Valid.FirstName,
                                                       Config.CreateAccountData.Valid.LastName,
@@ -65,10 +61,6 @@ namespace MyStore.scenarios.createAccount
         [Test]
         public void InvalidZip()
         {
-            Actions.FillAuthenticationForm(Config.Credentials.Valid.UnregisteredEmail);
-            WebDriverWait wait = new WebDriverWait(Driver.driver, TimeSpan.FromSeconds(6));
-            IWebElement registrationHeading = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.CssSelector("#account-creation_form > div:nth-child(1) > h3")));
-            Assert.IsTrue(registrationHeading.Displayed);
 
             Actions.FillCreateAccountForm(Config.CreateAccountData.Valid.FirstName,
                                                       Config.CreateAccountData.Valid.LastName,
@@ -80,6 +72,21 @@ namespace MyStore.scenarios.createAccount
 
             var error = Driver.driver.FindElement(By.CssSelector("#center_column > div > ol > li"));
             Assert.AreEqual(Config.ErrorMessages.InvalidZipCode, error.Text);
+        }
+
+        [Test]
+        public void NoStateSelected()
+        {
+            Actions.FillCreateAccountWithoutState(Config.CreateAccountData.Valid.FirstName,
+                                                      Config.CreateAccountData.Valid.LastName,
+                                                      Config.CreateAccountData.Valid.Password,
+                                                      Config.CreateAccountData.Valid.Address,
+                                                      Config.CreateAccountData.Valid.City,
+                                                      Config.CreateAccountData.Valid.PostalCode,
+                                                      Config.CreateAccountData.Valid.MobilePhone);
+
+            var error = Driver.driver.FindElement(By.CssSelector("#center_column > div > ol > li"));
+            Assert.AreEqual(Config.ErrorMessages.NoStateSelected, error.Text);
         }
 
         [OneTimeTearDown]
