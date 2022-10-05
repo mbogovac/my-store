@@ -20,5 +20,11 @@ namespace MyStore
             Thread.Sleep(2000);
             loginForm.ForgotPasswordLink.Click();
         }
+
+        public static void ConactUsThroughHomePage()
+        {
+            HomePage homePage = new HomePage();
+            homePage.ContactUsLink.Click();
+        }
     }
 }

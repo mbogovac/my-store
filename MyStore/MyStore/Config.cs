@@ -43,6 +43,22 @@
             }
         }
 
+        public static class ContactUsData
+        {
+            public static class Valid
+            {
+                public static string Email = "mila.bogovac@gmail.com";
+                public static string OrderRef = "product 1";
+                public static string Message = "hello, i have a problem with product 1";
+            }
+
+            public static class Invalid
+            {
+                public static string Empty = "";
+                public static string InvalidEmail = "mila@gmail";
+            }
+            
+        }
 
         public static class ErrorMessages
         {
@@ -55,6 +71,12 @@
             public static string InvalidZipCode = "The Zip/Postal code you've entered is invalid. It must follow this format: 00000";
             public static string NoStateSelected = "This country requires you to choose a State.";
         }
+
+        public static class SuccessMsg
+        {
+            public static string MessageSent = "Your message has been successfully sent to our team.";
+        }
+
 
     }
 }

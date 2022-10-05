@@ -19,6 +19,6 @@ namespace MyStore.pages
         public IWebElement SignIn { get; set; }
 
         [FindsBy(How = How.CssSelector, Using = "#contact-link > a")]
-        public IWebElement ContactUs { get; set; }
+        public IWebElement ContactUsLink { get; set; }
     }
 }
