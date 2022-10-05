@@ -1,14 +1,14 @@
 ﻿
 using NUnit.Framework;
-using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
+using OpenQA.Selenium;
 using System;
 
 namespace MyStore.scenarios.contactUs.loggedOutUsers
 {
-    public class SendMessageValidData
+    public class InvalidData
     {
-        public SendMessageValidData()
+        public InvalidData()
         {
         }
 
@@ -23,18 +23,18 @@ namespace MyStore.scenarios.contactUs.loggedOutUsers
         }
 
         [Test]
-        public void AllValidData()
+        public void InvalidEmailFormat()
         {
-            Actions.FillContactUsForm(Config.ContactUsData.Valid.Email,
+            Actions.FillContactUsForm(Config.ContactUsData.Invalid.InvalidEmail,
                                       Config.ContactUsData.Valid.OrderRef,
                                       Config.ContactUsData.Valid.Message);
 
             WebDriverWait wait = new WebDriverWait(Driver.driver, TimeSpan.FromSeconds(8));
-            IWebElement success = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.CssSelector("#center_column > p")));
-            Assert.IsTrue(success.Displayed);
+            IWebElement registrationHeading = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.CssSelector("#center_column > div > ol > li")));
+            Assert.IsTrue(registrationHeading.Displayed);
 
-            var successMsg = Driver.driver.FindElement(By.CssSelector("#center_column > p"));
-            Assert.AreEqual(Config.SuccessMsg.MessageSent, successMsg.Text);
+            var error = Driver.driver.FindElement(By.CssSelector("#center_column > div > ol > li"));
+            Assert.AreEqual(Config.ErrorMessages.InvalidEmail, error.Text);
         }
 
         [OneTimeTearDown]

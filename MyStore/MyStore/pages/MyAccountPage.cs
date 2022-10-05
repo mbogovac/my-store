@@ -11,5 +11,7 @@ namespace MyStore.pages
             PageFactory.InitElements(Driver.driver, this);
         }
 
+        [FindsBy(How = How.CssSelector, Using = "#contact-link > a")]
+        public IWebElement ContactUsLink { get; set; }
     }
 }

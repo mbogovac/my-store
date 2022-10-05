@@ -26,5 +26,11 @@ namespace MyStore
             HomePage homePage = new HomePage();
             homePage.ContactUsLink.Click();
         }
+
+        public static void FromMyAccountToContactPage()
+        {
+            MyAccountPage myAccountPage = new MyAccountPage();
+            myAccountPage.ContactUsLink.Click();
+        }
     }
 }

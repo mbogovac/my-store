@@ -25,5 +25,8 @@ namespace MyStore.pages
 
         [FindsBy(How = How.Id, Using = "submitMessage")]
         public IWebElement SubmitMessage { get; set; }
+
+        [FindsBy(How = How.Name, Using = "id_order")]
+        public IWebElement OrderRefDropDown { get; set; }
     }
 }
