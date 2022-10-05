@@ -65,6 +65,27 @@ namespace MyStore
             createAcc.SubmitAccount.Click();
         }
 
+        public static void FillCreateAccountWithoutState(string firstName, string lastName, string password, string address, string city, string zip, string phone)
+        {
+            CreateAccountPage createAcc = new CreateAccountPage();
+            createAcc.FirstName.Clear();
+            createAcc.FirstName.SendKeys(firstName);
+            createAcc.LastName.Clear();
+            createAcc.LastName.SendKeys(lastName);
+            createAcc.Password.Clear();
+            createAcc.Password.SendKeys(password);
+            createAcc.Address.Clear();
+            createAcc.Address.SendKeys(address);
+            createAcc.City.Clear();
+            createAcc.City.SendKeys(city);
+            createAcc.PostalCode.Clear();
+            createAcc.PostalCode.SendKeys(zip);
+            createAcc.MobilePhone.Clear();
+            createAcc.MobilePhone.SendKeys(phone);
+
+            createAcc.SubmitAccount.Click();
+        }
+
         public static void MrRadioBtn()
         {
             CreateAccountPage createAcc = new CreateAccountPage();

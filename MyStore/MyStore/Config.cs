@@ -10,7 +10,7 @@
             {
                 public static string Email = "delboy@gmail.com";
                 public static string Password = "12345";
-                public static string UnregisteredEmail = "mila17@gmail.com";
+                public static string UnregisteredEmail = "mila18@gmail.com";
             }
 
             public static class Invalid
@@ -53,6 +53,7 @@
             public static string InvalidPass = "passwd is invalid.";
             public static string InvalidPhone = "phone_mobile is invalid.";
             public static string InvalidZipCode = "The Zip/Postal code you've entered is invalid. It must follow this format: 00000";
+            public static string NoStateSelected = "This country requires you to choose a State.";
         }
 
     }
