@@ -86,16 +86,23 @@ namespace MyStore
             createAcc.SubmitAccount.Click();
         }
 
-        public static void MrRadioBtn()
+        public static void FillContactUsForm (string email, string orderRef, string msg)
         {
-            CreateAccountPage createAcc = new CreateAccountPage();
-            createAcc.MrGender.Click();
+            ContactUsPage contactUsPage = new ContactUsPage();
+
+            SelectElement s = new SelectElement(contactUsPage.SubjectDropDown);
+            s.SelectByText("Customer service");
+
+            contactUsPage.Email.Clear();
+            contactUsPage.Email.SendKeys(email);
+            contactUsPage.OrderReference.Clear();
+            contactUsPage.OrderReference.SendKeys(orderRef);
+            contactUsPage.Message.Clear();
+            contactUsPage.Message.SendKeys(msg);
+
+            contactUsPage.SubmitMessage.Click();
+
         }
 
-        public static void MrsRadioBtn()
-        {
-            CreateAccountPage createAcc = new CreateAccountPage();
-            createAcc.MrsGender.Click();
-        }
     }
 }
