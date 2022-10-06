@@ -1,7 +1,9 @@
 ﻿using MyStore.pages;
 using NUnit.Framework;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
+using System;
 using System.Threading;
 
 namespace MyStore
@@ -154,6 +156,28 @@ namespace MyStore
             contactUsPage.Message.SendKeys(msg);
 
             contactUsPage.SubmitMessage.Click();
+        }
+
+        public static void AddToCart()
+        {
+            WomenPage womenPage = new WomenPage();
+            womenPage.AddToCart.Click();
+
+            WebDriverWait wait = new WebDriverWait(Driver.driver, TimeSpan.FromSeconds(7));
+            IWebElement productAdded = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath("//*[@id=\"layer_cart\"]/div[1]/div[1]/h2")));
+
+            womenPage.ProceedToCheckout.Click();
+        }
+
+        public static void FinishOrder()
+        {
+            FinishOrderPage finishOrderPage = new FinishOrderPage();
+            finishOrderPage.SummaryProceedToCheckot.Click();
+            finishOrderPage.AddressProceedToCheckout.Click();
+            finishOrderPage.TermsOfService.Click();
+            finishOrderPage.ShippingProceedToCheckout.Click();
+            finishOrderPage.BankWireMethod.Click();
+            finishOrderPage.ConfirmOrder.Click();
         }
 
     }
