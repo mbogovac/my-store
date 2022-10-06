@@ -77,6 +77,7 @@
         public static class SuccessMsg
         {
             public static string MessageSent = "Your message has been successfully sent to our team.";
+            public static string ProductOrdered = "Your order on My Store is complete.";
         }
 
 

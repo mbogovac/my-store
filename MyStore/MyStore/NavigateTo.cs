@@ -11,6 +11,12 @@ namespace MyStore
             homePage.SignIn.Click();
         }
 
+        public static void FromNavigationToWomenPage()
+        {
+            NavigationBar navigationBar = new NavigationBar();
+            navigationBar.WomenLink.Click();
+        }
+
         public static void ForgotYourPasswordPage()
         {
             HomePage homePage = new HomePage();
@@ -32,5 +38,7 @@ namespace MyStore
             MyAccountPage myAccountPage = new MyAccountPage();
             myAccountPage.ContactUsLink.Click();
         }
+
+
     }
 }
