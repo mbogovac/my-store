@@ -169,6 +169,27 @@ namespace MyStore
             womenPage.ProceedToCheckout.Click();
         }
 
+        public static void AddToCartAndChangeDetails(string quantity)
+        {
+            WomenPage womenPage = new WomenPage();
+            womenPage.ProductImageLink.Click();
+
+            womenPage.PlusIcon.Click();
+            Thread.Sleep(1000);
+            womenPage.PlusIcon.Click();
+            Thread.Sleep(1000);
+            womenPage.MinusIcon.Click();
+            Thread.Sleep(1000);
+            womenPage.Quantity.Clear();
+            womenPage.Quantity.SendKeys(quantity);
+            Thread.Sleep(1000);
+
+            SelectElement s = new SelectElement(womenPage.SizeDropDown);
+            s.SelectByText("L");
+
+            womenPage.AddToCart2.Click();
+        }
+
         public static void FinishOrder()
         {
             FinishOrderPage finishOrderPage = new FinishOrderPage();

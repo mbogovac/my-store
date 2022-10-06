@@ -96,6 +96,7 @@
     <Compile Include="pages\MyAccountPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="scenarios\orderProduct\AddToCartAndOrder.cs" />
+    <Compile Include="scenarios\orderProduct\ChangeProductDeatails.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
