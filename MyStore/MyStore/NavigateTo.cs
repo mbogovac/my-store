@@ -39,6 +39,16 @@ namespace MyStore
             myAccountPage.ContactUsLink.Click();
         }
 
+        public static void FromMyAccountToWishlist()
+        {
+            MyAccountPage myAccountPage = new MyAccountPage();
+            myAccountPage.MyWishListLink.Click();
+        }
 
+        public static void GoToMyAccountPage()
+        {
+            BlackNavigationBar blackNavigationBar = new BlackNavigationBar();
+            blackNavigationBar.NameLink.Click();
+        }
     }
 }

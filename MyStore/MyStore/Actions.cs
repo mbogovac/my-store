@@ -201,5 +201,22 @@ namespace MyStore
             finishOrderPage.ConfirmOrder.Click();
         }
 
+        public static void NewWishlist()
+        {
+            WishlistPage wishlistPage = new WishlistPage();
+            wishlistPage.WishlistName.Clear();
+            wishlistPage.WishlistName.SendKeys("First wishlist");
+            wishlistPage.SaveWishlist.Click();
+        }
+
+        public static void AddToWishlist()
+        {
+            WomenPage womenPage = new WomenPage();
+
+            womenPage.ProductImageLink.Click();
+            womenPage.AddToWishlistButton.Click();
+
+        }
+
     }
 }
