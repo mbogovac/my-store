@@ -42,5 +42,8 @@ namespace MyStore.pages
 
         [FindsBy(How = How.XPath, Using = "//*[@id=\"add_to_cart\"]/button/span")]
         public IWebElement AddToCart2 { get; set; }
+
+        [FindsBy(How = How.Id, Using = "wishlist_button")]
+        public IWebElement AddToWishlistButton { get; set; }
     }
 }
