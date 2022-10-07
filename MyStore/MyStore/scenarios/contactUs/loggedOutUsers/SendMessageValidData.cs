@@ -16,7 +16,7 @@ namespace MyStore.scenarios.contactUs.loggedOutUsers
         public void Initialize()
         {
             Actions.InitializeDriver();
-            NavigateTo.ConactUsThroughHomePage();
+            NavigateTo.ConactUsFromBlackNavBar();
 
             Driver.driver.Manage().Window.Maximize();
             Driver.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);

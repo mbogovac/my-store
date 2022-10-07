@@ -21,7 +21,7 @@ namespace MyStore.scenarios.contactUs.loggedInUsers
             NavigateTo.LoginFormThroughHomePage();
             Actions.FillLoginForm(Config.Credentials.Valid.Email, Config.Credentials.Valid.Password);
 
-            NavigateTo.FromMyAccountToContactPage();
+            NavigateTo.ConactUsFromBlackNavBar();
         }
 
         [Test]

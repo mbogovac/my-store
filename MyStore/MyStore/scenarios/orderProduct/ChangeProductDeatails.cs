@@ -32,7 +32,7 @@ namespace MyStore.scenarios.orderProduct
             WebDriverWait wait = new WebDriverWait(Driver.driver, TimeSpan.FromSeconds(10));
             IWebElement quantity = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.Id("layer_cart_product_attributes")));
 
-            Assert.AreEqual("Orange, L", quantity.Text);
+            Assert.AreEqual("Blue, L", quantity.Text);
         }
 
         [OneTimeTearDown]

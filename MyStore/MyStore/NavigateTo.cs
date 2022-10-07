@@ -27,16 +27,10 @@ namespace MyStore
             loginForm.ForgotPasswordLink.Click();
         }
 
-        public static void ConactUsThroughHomePage()
+        public static void ConactUsFromBlackNavBar()
         {
-            HomePage homePage = new HomePage();
-            homePage.ContactUsLink.Click();
-        }
-
-        public static void FromMyAccountToContactPage()
-        {
-            MyAccountPage myAccountPage = new MyAccountPage();
-            myAccountPage.ContactUsLink.Click();
+            BlackNavigationBar blackNavigationBar = new BlackNavigationBar();
+            blackNavigationBar.ContactUsLink.Click();
         }
 
         public static void FromMyAccountToWishlist()

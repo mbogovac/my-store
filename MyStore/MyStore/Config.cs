@@ -10,7 +10,7 @@
             {
                 public static string Email = "delboy@gmail.com";
                 public static string Password = "12345";
-                public static string UnregisteredEmail = "mila18@gmail.com";
+                public static string UnregisteredEmail = "mila20@gmail.com";
             }
 
             public static class Invalid
