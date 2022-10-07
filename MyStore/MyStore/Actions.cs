@@ -218,5 +218,17 @@ namespace MyStore
 
         }
 
+        public static void SelectMrRadioButton()
+        {
+            CreateAccountPage createAccountPage = new CreateAccountPage();
+            createAccountPage.MrGender.Click();
+        }
+
+        public static void SelectMrsRadioButton()
+        {
+            CreateAccountPage createAccountPage = new CreateAccountPage();
+            createAccountPage.MrsGender.Click();
+        }
+
     }
 }
