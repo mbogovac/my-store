@@ -83,6 +83,7 @@
     <Compile Include="scenarios\createAccount\EmptyMandatoryFields.cs" />
     <Compile Include="scenarios\createAccount\InvalidData.cs" />
     <Compile Include="scenarios\createAccount\MandatoryValidData.cs" />
+    <Compile Include="scenarios\createAccount\RadioButtonsSelection.cs" />
     <Compile Include="scenarios\login\LoginEmptyFields.cs" />
     <Compile Include="scenarios\login\LoginInvalidEmail.cs" />
     <Compile Include="scenarios\login\RetrievePassInvalidEmail.cs" />
