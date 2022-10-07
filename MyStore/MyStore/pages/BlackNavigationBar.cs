@@ -12,6 +12,9 @@ namespace MyStore.pages
         }
 
         [FindsBy(How = How.CssSelector, Using = "#header > div.nav > div > div > nav > div:nth-child(1) > a")]
-        public IWebElement NameLink { get; set; }    
+        public IWebElement NameLink { get; set; }
+
+        [FindsBy(How = How.CssSelector, Using = "#contact-link > a")]
+        public IWebElement ContactUsLink { get; set; }
     }
 }

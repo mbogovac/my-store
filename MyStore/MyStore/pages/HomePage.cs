@@ -18,7 +18,6 @@ namespace MyStore.pages
         [FindsBy(How = How.ClassName, Using = "login")]
         public IWebElement SignIn { get; set; }
 
-        [FindsBy(How = How.CssSelector, Using = "#contact-link > a")]
-        public IWebElement ContactUsLink { get; set; }
+
     }
 }

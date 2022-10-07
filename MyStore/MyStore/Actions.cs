@@ -85,6 +85,9 @@ namespace MyStore
             createAcc.MobilePhone.Clear();
             createAcc.MobilePhone.SendKeys(phone);
 
+            SelectElement s = new SelectElement(createAcc.StateDropDown);
+            s.SelectByIndex(0);
+
             createAcc.SubmitAccount.Click();
         }
 
@@ -175,14 +178,11 @@ namespace MyStore
             womenPage.ProductImageLink.Click();
 
             womenPage.PlusIcon.Click();
-            Thread.Sleep(1000);
             womenPage.PlusIcon.Click();
-            Thread.Sleep(1000);
             womenPage.MinusIcon.Click();
-            Thread.Sleep(1000);
             womenPage.Quantity.Clear();
             womenPage.Quantity.SendKeys(quantity);
-            Thread.Sleep(1000);
+            womenPage.AnotherColor.Click();
 
             SelectElement s = new SelectElement(womenPage.SizeDropDown);
             s.SelectByText("L");

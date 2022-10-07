@@ -45,7 +45,6 @@ namespace MyStore.scenarios.createAccount
         [Test]
         public void InvalidMobilePhone()
         {
-
             Actions.FillCreateAccountForm(Config.CreateAccountData.Valid.FirstName,
                                                       Config.CreateAccountData.Valid.LastName,
                                                       Config.CreateAccountData.Valid.Password,
@@ -61,7 +60,6 @@ namespace MyStore.scenarios.createAccount
         [Test]
         public void InvalidZip()
         {
-
             Actions.FillCreateAccountForm(Config.CreateAccountData.Valid.FirstName,
                                                       Config.CreateAccountData.Valid.LastName,
                                                       Config.CreateAccountData.Valid.Password,
